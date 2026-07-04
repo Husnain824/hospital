@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sufi Amanat Ali Surgical Hospital – Pattoki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+/* ─── THEME VARIABLES ─────────────────────────────────────── */
+:root {
+  --bg:         #f5f7fa;
+  --bg2:        #eef1f6;
+  --bg3:        #ffffff;
+  --surface:    #ffffff;
+  --surface2:   #f0f4fb;
+  --border:     rgba(10,60,120,0.10);
+  --accent:     #0a3c78;
+  --accent2:    #1565c0;
+  --gold:       #b8820a;
+  --gold-light: #e5a813;
+  --text:       #0d1b2e;
+  --text2:      #3a5070;
+  --text3:      #6b88a8;
+  --hero-bg:    linear-gradient(135deg,#0a3c78 0%,#1565c0 60%,#1e88e5 100%);
+  --card-shadow: 0 4px 32px rgba(10,60,120,0.10);
+  --nav-bg:     rgba(255,255,255,0.92);
+  --nav-border: rgba(10,60,120,0.10);
+  --tag-bg:     rgba(10,60,120,0.08);
+  --tag-color:  #0a3c78;
+  --stat-bg:    linear-gradient(135deg,#0a3c78,#1565c0);
+  --footer-bg:  #0a1a2e;
+  --switch-bg:  #e2e8f0;
+  --switch-knob:#0a3c78;
+  --overlay:    rgba(10,30,60,0.55);
+}
+
+[data-theme="dark"] {
+  --bg:         #08111e;
+  --bg2:        #0d1a2e;
+  --bg3:        #0d1a2e;
+  --surface:    #111f33;
+  --surface2:   #162540;
+  --border:     rgba(180,145,20,0.15);
+  --accent:     #e5a813;
+  --accent2:    #ffca28;
+  --gold:       #e5a813;
+  --gold-light: #ffd54f;
+  --text:       #eaf0fb;
+  --text2:      #a8bcd4;
+  --text3:      #5f7fa0;
+  --hero-bg:    linear-gradient(135deg,#050d18 0%,#0a1a2e 60%,#0d2340 100%);
+  --card-shadow: 0 4px 40px rgba(0,0,0,0.45);
+  --nav-bg:     rgba(8,17,30,0.95);
+  --nav-border: rgba(180,145,20,0.15);
+  --tag-bg:     rgba(229,168,19,0.12);
+  --tag-color:  #e5a813;
+  --stat-bg:    linear-gradient(135deg,#0a1a2e,#0d2340);
+  --footer-bg:  #040b14;
+  --switch-bg:  #1a2e4a;
+  --switch-knob:#e5a813;
+  --overlay:    rgba(2,8,18,0.70);
+}
+
+/* ─── RESET & BASE ────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:background .4s,color .4s;
+  overflow-x:hidden;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+ul{list-style:none}
+
+/* ─── SCROLLBAR ───────────────────────────────────────────── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px}
+
+/* ─── NAVBAR ──────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:var(--nav-bg);
+  border-bottom:1px solid var(--nav-border);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  transition:all .4s;
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;
+  padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+}
+.nav-logo{display:flex;align-items:center;gap:14px}
+.logo-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;color:#fff;
+  box-shadow:0 2px 16px rgba(10,60,120,0.25);
+  flex-shrink:0;
+}
+[data-theme="dark"] .logo-icon{box-shadow:0 2px 20px rgba(229,168,19,0.3)}
+.logo-text{line-height:1.2}
+.logo-text strong{
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;font-weight:700;
+  color:var(--text);
+  display:block;
+}
+.logo-text span{font-size:11px;color:var(--text3);letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{
+  font-size:14px;font-weight:500;color:var(--text2);
+  transition:color .25s;
+  position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+  background:var(--accent);border-radius:2px;transition:width .3s;
+}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:16px}
+
+/* Theme Switch */
+.theme-switch{
+  display:flex;align-items:center;gap:8px;cursor:pointer;
+  background:var(--switch-bg);
+  border-radius:50px;padding:5px 10px;
+  transition:background .4s;user-select:none;
+}
+.theme-switch .icon{font-size:13px;color:var(--text3);transition:color .3s}
+.switch-track{
+  width:36px;height:20px;
+  background:var(--switch-knob);
+  border-radius:20px;position:relative;
+  transition:background .4s;
+  flex-shrink:0;
+}
+.switch-track::after{
+  content:'';
+  position:absolute;top:3px;left:3px;
+  width:14px;height:14px;
+  background:#fff;border-radius:50%;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1);
+}
+[data-theme="dark"] .switch-track::after{transform:translateX(16px)}
+
+.btn-appt{
+  background:var(--accent);
+  color:#fff;
+  padding:9px 22px;
+  border-radius:8px;
+  font-size:13px;font-weight:600;
+  letter-spacing:.02em;
+  transition:opacity .2s,transform .2s;
+  border:none;cursor:pointer;
+}
+.btn-appt:hover{opacity:.88;transform:translateY(-1px)}
+[data-theme="dark"] .btn-appt{color:#08111e}
+
+/* Hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+.mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:999;
+  background:var(--nav-bg);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--nav-border);
+  padding:20px 28px;
+  flex-direction:column;gap:16px;
+}
+.mobile-menu a{font-size:15px;font-weight:500;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+
+/* ─── HERO ────────────────────────────────────────────────── */
+#home{
+  min-height:100vh;
+  background:var(--hero-bg);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;
+  padding-top:72px;
+}
+.hero-shapes{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hero-shapes .circle1{
+  position:absolute;top:-120px;right:-120px;
+  width:520px;height:520px;border-radius:50%;
+  border:1px solid rgba(255,255,255,0.07);
+}
+.hero-shapes .circle2{
+  position:absolute;bottom:-200px;left:-80px;
+  width:700px;height:700px;border-radius:50%;
+  border:1px solid rgba(255,255,255,0.05);
+}
+.hero-shapes .circle3{
+  position:absolute;top:30%;right:15%;
+  width:260px;height:260px;border-radius:50%;
+  background:rgba(255,255,255,0.03);
+}
+.hero-grid-lines{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
+  background-size:60px 60px;
+}
+[data-theme="dark"] .hero-grid-lines{
+  background-image:linear-gradient(rgba(229,168,19,0.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(229,168,19,0.04) 1px,transparent 1px);
+}
+.hero-inner{
+  max-width:1200px;margin:0 auto;width:100%;
+  padding:80px 28px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:center;
+  position:relative;z-index:1;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:100px;padding:6px 16px;
+  font-size:12px;font-weight:500;color:rgba(255,255,255,0.9);
+  letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:24px;
+  animation:fadeUp .7s ease both;
+}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+[data-theme="dark"] .hero-badge{background:rgba(229,168,19,0.12);border-color:rgba(229,168,19,0.25);color:rgba(255,220,100,0.9)}
+[data-theme="dark"] .hero-badge .dot{background:#e5a813}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,4.5vw,58px);
+  font-weight:800;
+  color:#ffffff;
+  line-height:1.12;
+  margin-bottom:20px;
+  animation:fadeUp .7s .1s ease both;
+}
+.hero-title .accent-line{
+  display:block;
+  background:linear-gradient(90deg,#ffd54f,#ffca28);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+[data-theme="dark"] .hero-title .accent-line{background:linear-gradient(90deg,#e5a813,#ffd54f);-webkit-background-clip:text;background-clip:text}
+.hero-sub{
+  font-size:16px;color:rgba(255,255,255,0.75);
+  margin-bottom:36px;max-width:480px;line-height:1.8;
+  animation:fadeUp .7s .2s ease both;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
+.btn-primary{
+  background:#ffffff;color:var(--accent);
+  padding:14px 32px;border-radius:10px;
+  font-size:15px;font-weight:600;
+  transition:all .25s;border:none;cursor:pointer;
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.2)}
+[data-theme="dark"] .btn-primary{background:var(--gold);color:#08111e}
+.btn-outline-w{
+  background:transparent;
+  border:2px solid rgba(255,255,255,0.4);
+  color:#fff;
+  padding:13px 28px;border-radius:10px;
+  font-size:15px;font-weight:500;
+  transition:all .25s;cursor:pointer;
+}
+.btn-outline-w:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.7)}
+.hero-quick-info{
+  display:flex;gap:28px;margin-top:40px;
+  animation:fadeUp .7s .4s ease both;
+}
+.hero-quick-info .qitem{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.8)}
+.hero-quick-info .qitem i{font-size:15px;color:#ffd54f}
+[data-theme="dark"] .hero-quick-info .qitem i{color:#e5a813}
+.hero-quick-info .qitem span{font-size:13px;font-weight:500}
+
+/* Hero image side */
+.hero-right{position:relative;display:flex;justify-content:center;align-items:flex-end;animation:fadeUp .7s .2s ease both}
+.doc-card{
+  background:rgba(255,255,255,0.10);
+  border:1px solid rgba(255,255,255,0.18);
+  border-radius:24px;
+  padding:32px 28px;
+  backdrop-filter:blur(20px);
+  text-align:center;
+  position:relative;
+  min-width:300px;
+}
+[data-theme="dark"] .doc-card{background:rgba(10,20,40,0.6);border-color:rgba(229,168,19,0.2)}
+.doc-placeholder{
+  width:140px;height:140px;border-radius:50%;
+  border:3px solid rgba(255,255,255,0.3);
+  background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(255,255,255,0.05));
+  margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:52px;color:rgba(255,255,255,0.5);
+  position:relative;overflow:hidden;
+}
+[data-theme="dark"] .doc-placeholder{border-color:rgba(229,168,19,0.3);color:rgba(229,168,19,0.4)}
+.doc-placeholder .upload-hint{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(0,0,0,0.5);
+  font-size:9px;color:rgba(255,255,255,0.7);
+  padding:4px;text-align:center;letter-spacing:.03em;
+  font-family:'DM Sans',sans-serif;
+}
+.doc-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:700;
+  color:#fff;margin-bottom:6px;
+}
+[data-theme="dark"] .doc-name{color:#ffd54f}
+.doc-role{font-size:12px;color:rgba(255,255,255,0.65);letter-spacing:.05em;line-height:1.6}
+.doc-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:16px}
+.doc-tag{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  color:rgba(255,255,255,0.85);
+  font-size:10px;font-weight:500;
+  padding:3px 10px;border-radius:100px;
+  letter-spacing:.04em;
+}
+[data-theme="dark"] .doc-tag{background:rgba(229,168,19,0.12);border-color:rgba(229,168,19,0.25);color:#ffd54f}
+.card-badge{
+  position:absolute;top:-16px;right:20px;
+  background:linear-gradient(135deg,#ffd54f,#ff8f00);
+  color:#333;font-size:10px;font-weight:700;
+  padding:5px 14px;border-radius:100px;letter-spacing:.06em;
+  text-transform:uppercase;box-shadow:0 4px 16px rgba(255,200,0,0.4);
+}
+[data-theme="dark"] .card-badge{background:linear-gradient(135deg,#e5a813,#c67c00);color:#08111e}
+
+/* Floating stats */
+.float-stat{
+  position:absolute;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px 18px;
+  display:flex;align-items:center;gap:10px;
+  box-shadow:var(--card-shadow);
+  animation:float 3s ease-in-out infinite;
+}
+.float-stat.s1{top:10px;left:-60px;animation-delay:0s}
+.float-stat.s2{bottom:20px;left:-50px;animation-delay:1s}
+.float-stat .stat-icon{
+  width:36px;height:36px;border-radius:10px;
+  background:var(--tag-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;color:var(--accent);
+}
+.float-stat .stat-val{font-size:16px;font-weight:700;color:var(--text);line-height:1}
+.float-stat .stat-lbl{font-size:11px;color:var(--text3);margin-top:2px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── SECTION STYLES ──────────────────────────────────────── */
+section{padding:90px 0}
+.container{max-width:1200px;margin:0 auto;padding:0 28px}
+.section-label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;
+}
+.section-label::before{content:'';width:24px;height:2px;background:var(--accent);border-radius:2px}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,3.5vw,44px);
+  font-weight:700;color:var(--text);line-height:1.2;
+  margin-bottom:16px;
+}
+.section-sub{font-size:15px;color:var(--text2);max-width:560px;line-height:1.8}
+
+/* ─── STATS BAR ───────────────────────────────────────────── */
+#stats{
+  background:var(--stat-bg);
+  padding:50px 0;position:relative;overflow:hidden;
+}
+#stats::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+[data-theme="dark"] #stats::before{background-image:radial-gradient(rgba(229,168,19,0.05) 1px,transparent 1px)}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2px;position:relative;z-index:1;
+}
+.stat-item{
+  text-align:center;padding:20px;
+  border-right:1px solid rgba(255,255,255,0.1);
+}
+.stat-item:last-child{border-right:none}
+[data-theme="dark"] .stat-item{border-color:rgba(229,168,19,0.12)}
+.stat-num{
+  font-family:'Playfair Display',serif;
+  font-size:42px;font-weight:800;
+  color:#ffffff;line-height:1;
+}
+[data-theme="dark"] .stat-num{color:#ffd54f}
+.stat-num span{font-size:28px}
+.stat-desc{font-size:13px;color:rgba(255,255,255,0.65);margin-top:6px;font-weight:500}
+[data-theme="dark"] .stat-desc{color:rgba(255,210,80,0.65)}
+
+/* ─── ABOUT ───────────────────────────────────────────────── */
+#about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.about-image-wrap{position:relative}
+.about-img-frame{
+  border-radius:24px;overflow:hidden;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  aspect-ratio:4/5;
+  display:flex;align-items:center;justify-content:center;
+  font-size:100px;color:rgba(255,255,255,0.25);
+  position:relative;
+}
+.about-img-frame .ph-note{
+  position:absolute;bottom:0;left:0;right:0;
+  background:var(--overlay);padding:14px;
+  font-size:11px;color:rgba(255,255,255,0.6);text-align:center;letter-spacing:.04em;
+}
+.about-corner-badge{
+  position:absolute;bottom:-20px;right:-20px;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:16px;padding:18px 22px;
+  box-shadow:var(--card-shadow);text-align:center;
+}
+.about-corner-badge .num{
+  font-family:'Playfair Display',serif;
+  font-size:32px;font-weight:800;color:var(--accent);line-height:1;
+}
+.about-corner-badge .lbl{font-size:11px;color:var(--text3);margin-top:4px}
+.about-content{}
+.about-desc{font-size:15px;color:var(--text2);margin:20px 0 28px;line-height:1.9}
+.creds-list{display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.cred-item{
+  display:flex;align-items:center;gap:14px;
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:12px;padding:14px 18px;
+}
+.cred-icon{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--tag-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:var(--accent);flex-shrink:0;
+}
+.cred-text strong{display:block;font-size:14px;font-weight:600;color:var(--text)}
+.cred-text span{font-size:12px;color:var(--text3)}
+
+/* ─── SERVICES ────────────────────────────────────────────── */
+#services{background:var(--bg2)}
+.services-header{text-align:center;margin-bottom:56px}
+.services-header .section-sub{margin:0 auto}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.service-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:32px 28px;
+  position:relative;overflow:hidden;
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+  cursor:default;
+}
+.service-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s;border-radius:3px 3px 0 0;
+}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--card-shadow);border-color:var(--accent)}
+.service-card:hover::before{transform:scaleX(1)}
+.svc-icon-wrap{
+  width:60px;height:60px;border-radius:16px;
+  background:var(--tag-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;color:var(--accent);
+  margin-bottom:20px;
+  transition:background .3s,transform .3s;
+}
+.service-card:hover .svc-icon-wrap{background:var(--accent);color:#fff;transform:rotate(-4deg) scale(1.05)}
+[data-theme="dark"] .service-card:hover .svc-icon-wrap{color:#08111e}
+.svc-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:21px;font-weight:700;
+  color:var(--text);margin-bottom:10px;
+}
+.svc-desc{font-size:13px;color:var(--text2);line-height:1.8}
+.svc-badge{
+  display:inline-block;margin-top:16px;
+  font-size:11px;font-weight:600;letter-spacing:.06em;
+  color:var(--accent);background:var(--tag-bg);
+  padding:4px 12px;border-radius:100px;
+  text-transform:uppercase;
+}
+.svc-24{
+  background:linear-gradient(135deg,var(--accent),var(--accent2)) !important;
+  color:#fff !important;
+}
+.svc-24 .svc-icon-wrap{background:rgba(255,255,255,0.15);color:#fff}
+.svc-24 .svc-title,.svc-24 .svc-desc{color:rgba(255,255,255,0.9)}
+.svc-24 .svc-badge{background:rgba(255,255,255,0.2);color:#fff}
+[data-theme="dark"] .svc-24{background:linear-gradient(135deg,#0d2340,#162850) !important;border-color:rgba(229,168,19,0.3) !important}
+[data-theme="dark"] .svc-24 .svc-title{color:#ffd54f !important}
+[data-theme="dark"] .svc-24 .svc-badge{background:rgba(229,168,19,0.15);color:#ffd54f}
+
+/* ─── HEALTH CARD ─────────────────────────────────────────── */
+#healthcard{background:var(--bg)}
+.hc-wrap{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:24px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;
+  box-shadow:var(--card-shadow);
+}
+.hc-left{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  padding:52px 48px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.hc-left::before{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:300px;height:300px;border-radius:50%;
+  background:rgba(255,255,255,0.06);
+}
+.hc-left::after{
+  content:'';position:absolute;bottom:-100px;left:-40px;
+  width:250px;height:250px;border-radius:50%;
+  background:rgba(255,255,255,0.04);
+}
+[data-theme="dark"] .hc-left{background:linear-gradient(135deg,#0a1a2e,#0d2340)}
+.hc-icon{font-size:48px;margin-bottom:20px;position:relative;z-index:1}
+.hc-title{
+  font-family:'Playfair Display',serif;
+  font-size:32px;font-weight:700;
+  color:#fff;margin-bottom:14px;line-height:1.2;
+  position:relative;z-index:1;
+}
+[data-theme="dark"] .hc-title{color:#ffd54f}
+.hc-sub{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.8;position:relative;z-index:1}
+[data-theme="dark"] .hc-sub{color:rgba(255,210,80,0.7)}
+.hc-right{padding:48px}
+.hc-right h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;font-weight:700;color:var(--text);
+  margin-bottom:28px;
+}
+.hc-benefits{display:flex;flex-direction:column;gap:16px}
+.hc-benefit{
+  display:flex;align-items:flex-start;gap:14px;
+  padding-bottom:16px;border-bottom:1px solid var(--border);
+}
+.hc-benefit:last-child{border-bottom:none;padding-bottom:0}
+.hc-benefit-icon{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--tag-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;color:var(--accent);flex-shrink:0;
+}
+.hc-benefit-text strong{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px}
+.hc-benefit-text span{font-size:12px;color:var(--text3)}
+
+/* ─── TIMINGS ─────────────────────────────────────────────── */
+#timings{background:var(--bg2)}
+.timings-header{text-align:center;margin-bottom:52px}
+.timings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.timing-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;padding:32px 28px;
+  position:relative;transition:all .3s;
+}
+.timing-card:hover{transform:translateY(-4px);box-shadow:var(--card-shadow)}
+.timing-card .tc-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:var(--tag-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;color:var(--accent);margin-bottom:18px;
+}
+.timing-card h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:700;color:var(--text);margin-bottom:18px;
+}
+.timing-rows{display:flex;flex-direction:column;gap:10px}
+.timing-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:9px 14px;background:var(--surface2);
+  border-radius:8px;
+}
+.timing-row .day{font-size:13px;font-weight:500;color:var(--text2)}
+.timing-row .time{font-size:13px;font-weight:600;color:var(--accent)}
+.timing-row .time.closed{color:#ef5350}
+.timing-row.highlight{background:var(--tag-bg)}
+.always-open{
+  margin-top:16px;
+  background:linear-gradient(135deg,#1b5e20,#2e7d32);
+  border-radius:10px;padding:10px 16px;
+  display:flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:600;color:#fff;
+}
+[data-theme="dark"] .always-open{background:linear-gradient(135deg,#1a3a0a,#234d0d)}
+.always-open .green-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;animation:pulse 1.5s infinite}
+
+/* ─── WHY US ───────────────────────────────────────────────── */
+#why{background:var(--bg)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.why-image-side{position:relative}
+.why-img-stack{position:relative;height:480px}
+.why-img-main{
+  position:absolute;right:0;top:0;
+  width:78%;height:400px;
+  border-radius:24px;overflow:hidden;
+  background:linear-gradient(160deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:80px;color:rgba(255,255,255,0.2);
+}
+.why-img-sub{
+  position:absolute;left:0;bottom:0;
+  width:55%;height:260px;
+  border-radius:20px;overflow:hidden;
+  border:5px solid var(--bg);
+  background:linear-gradient(135deg,var(--surface),var(--surface2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:50px;color:var(--accent);
+  box-shadow:var(--card-shadow);
+}
+.why-points{display:flex;flex-direction:column;gap:20px}
+.why-point{
+  display:flex;gap:18px;
+  padding:22px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  transition:all .3s;
+}
+.why-point:hover{border-color:var(--accent);box-shadow:var(--card-shadow)}
+.why-point-icon{
+  width:48px;height:48px;border-radius:12px;
+  background:var(--tag-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;color:var(--accent);flex-shrink:0;
+}
+.why-point h5{font-size:16px;font-weight:600;color:var(--text);margin-bottom:5px}
+.why-point p{font-size:13px;color:var(--text2);line-height:1.7}
+
+/* ─── TESTIMONIALS ────────────────────────────────────────── */
+#reviews{background:var(--bg2)}
+.reviews-header{text-align:center;margin-bottom:52px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;padding:28px;
+  transition:all .3s;
+}
+.review-card:hover{transform:translateY(-4px);box-shadow:var(--card-shadow)}
+.stars{color:#f59e0b;font-size:14px;margin-bottom:14px}
+[data-theme="dark"] .stars{color:#e5a813}
+.review-text{font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:20px;font-style:italic}
+.review-author{display:flex;align-items:center;gap:12px}
+.author-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--tag-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:var(--accent);font-weight:700;
+  font-family:'Cormorant Garamond',serif;
+}
+.author-name{font-size:14px;font-weight:600;color:var(--text)}
+.author-loc{font-size:12px;color:var(--text3)}
+
+/* ─── CONTACT ─────────────────────────────────────────────── */
+#contact{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.contact-item{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:22px;background:var(--surface);
+  border:1px solid var(--border);border-radius:16px;
+  transition:border-color .3s;
+}
+.contact-item:hover{border-color:var(--accent)}
+.contact-item-icon{
+  width:48px;height:48px;border-radius:12px;
+  background:var(--tag-bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;color:var(--accent);flex-shrink:0;
+}
+.contact-item strong{display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px}
+.contact-item a,.contact-item span{font-size:14px;color:var(--text2)}
+.contact-item a:hover{color:var(--accent)}
+.contact-form-wrap{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:24px;padding:40px 36px;
+}
+.contact-form-wrap h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;font-weight:700;color:var(--text);margin-bottom:28px;
+}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--text2);margin-bottom:7px}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px 16px;
+  font-size:14px;color:var(--text);
+  font-family:'DM Sans',sans-serif;
+  transition:border-color .3s,box-shadow .3s;
+  outline:none;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(10,60,120,0.1);
+}
+[data-theme="dark"] .form-group input:focus,[data-theme="dark"] .form-group select:focus,[data-theme="dark"] .form-group textarea:focus{box-shadow:0 0 0 3px rgba(229,168,19,0.1)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.btn-submit{
+  width:100%;background:var(--accent);color:#fff;
+  border:none;border-radius:10px;
+  padding:14px;font-size:15px;font-weight:600;
+  cursor:pointer;transition:opacity .2s,transform .2s;
+  font-family:'DM Sans',sans-serif;letter-spacing:.02em;
+}
+.btn-submit:hover{opacity:.88;transform:translateY(-1px)}
+[data-theme="dark"] .btn-submit{color:#08111e}
+
+/* ─── MAP STRIP ───────────────────────────────────────────── */
+.map-strip{
+  background:var(--surface);border-top:1px solid var(--border);
+  overflow:hidden;border-radius:0;
+}
+.map-strip iframe{
+  width:100%;height:320px;border:none;
+  filter:grayscale(30%);
+}
+[data-theme="dark"] .map-strip iframe{filter:grayscale(60%) invert(85%) hue-rotate(180deg)}
+
+/* ─── FOOTER ──────────────────────────────────────────────── */
+footer{
+  background:var(--footer-bg);
+  color:rgba(255,255,255,0.75);
+  padding:60px 0 28px;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;padding:0 28px;
+}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;
+  gap:48px;margin-bottom:48px;
+}
+.footer-brand .logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.footer-brand .flogo-icon{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;color:#fff;
+}
+[data-theme="dark"] .footer-brand .flogo-icon{background:#162540}
+.footer-brand .flogo-text strong{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-weight:700;color:#fff;display:block;
+}
+.footer-brand .flogo-text span{font-size:11px;color:rgba(255,255,255,0.45)}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:20px}
+.footer-socials{display:flex;gap:10px}
+.f-social{
+  width:36px;height:36px;border-radius:9px;
+  border:1px solid rgba(255,255,255,0.12);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;color:rgba(255,255,255,0.5);
+  transition:all .3s;
+}
+.f-social:hover{border-color:var(--gold);color:var(--gold);background:rgba(255,255,255,0.05)}
+.footer-col h4{
+  font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.9);margin-bottom:18px;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{
+  font-size:13px;color:rgba(255,255,255,0.5);
+  transition:color .25s;display:flex;align-items:center;gap:6px;
+}
+.footer-col ul li a:hover{color:rgba(255,255,255,0.9)}
+.footer-col ul li a::before{content:'›';opacity:.4}
+.footer-contact-list{display:flex;flex-direction:column;gap:12px}
+.fc-item{display:flex;align-items:flex-start;gap:10px;font-size:12px;color:rgba(255,255,255,0.5)}
+.fc-item i{color:var(--gold);margin-top:2px;flex-shrink:0}
+.footer-divider{height:1px;background:rgba(255,255,255,0.07);margin-bottom:24px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.35)}
+.footer-bottom a{color:rgba(255,255,255,0.5)}
+
+/* ─── EMERGENCY BANNER ────────────────────────────────────── */
+.emergency-banner{
+  position:fixed;bottom:24px;right:24px;z-index:900;
+  background:linear-gradient(135deg,#c62828,#e53935);
+  color:#fff;border-radius:16px;
+  padding:14px 20px;
+  display:flex;align-items:center;gap:12px;
+  box-shadow:0 8px 32px rgba(197,40,40,0.4);
+  cursor:pointer;transition:transform .25s;text-decoration:none;
+}
+.emergency-banner:hover{transform:translateY(-3px)}
+.emergency-banner i{font-size:20px;animation:pulse 1s infinite}
+.emergency-banner span{font-size:14px;font-weight:600}
+.emergency-banner small{display:block;font-size:11px;opacity:.8;margin-top:1px}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-right{display:none}
+  .hero-quick-info{justify-content:center}
+  .about-grid,.contact-grid,.why-grid{grid-template-columns:1fr}
+  .about-image-wrap,.why-image-side{display:none}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1)}
+  .hc-wrap{grid-template-columns:1fr}
+  .timings-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .nav-links,.btn-appt{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .services-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero-quick-info{flex-direction:column;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <div class="logo-text">
+        <strong>Sufi Amanat Ali</strong>
+        <span>Surgical Hospital · Pattoki</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#timings">Timings</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="theme-switch" onclick="toggleTheme()" title="Toggle Theme">
+        <i class="fa-solid fa-sun icon" id="themeIcon"></i>
+        <div class="switch-track"></div>
+        <i class="fa-solid fa-moon icon"></i>
+      </div>
+      <a href="tel:03008169857" class="btn-appt">
+        <i class="fa-solid fa-phone" style="margin-right:6px;font-size:12px"></i>
+        Call Now
+      </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#about" onclick="closeMobile()">About Doctor</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#healthcard" onclick="closeMobile()">Health Card</a>
+  <a href="#timings" onclick="closeMobile()">Timings</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="tel:03008169857" style="color:#ef5350;font-weight:700"><i class="fa-solid fa-phone" style="margin-right:6px"></i>0300 8169857</a>
+</div>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-shapes">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="hero-grid-lines"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge"><div class="dot"></div>Pattoki's Trusted Surgical Care</div>
+      <h1 class="hero-title">
+        Advanced Care,<br>
+        <span class="accent-line">Compassionate</span>
+        Healing
+      </h1>
+      <p class="hero-sub">Sufi Amanat Ali Surgical Hospital — delivering safe, affordable and high-quality healthcare services to every patient in Pattoki and surrounding areas.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary"><i class="fa-solid fa-calendar-check" style="margin-right:8px"></i>Book Appointment</a>
+        <a href="#services" class="btn-outline-w"><i class="fa-solid fa-stethoscope" style="margin-right:8px"></i>Our Services</a>
+      </div>
+      <div class="hero-quick-info">
+        <div class="qitem"><i class="fa-solid fa-location-dot"></i><span>Kohna Rd, Pattoki</span></div>
+        <div class="qitem"><i class="fa-solid fa-phone"></i><span>0300 8169857</span></div>
+        <div class="qitem"><i class="fa-solid fa-clock"></i><span>Emergency 24/7</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="float-stat s1">
+        <div class="stat-icon"><img src="p.png" alt=""></div>
+        <div>
+          <div class="stat-val">Gold</div>
+          <div class="stat-lbl">Medalist Surgeon</div>
+        </div>
+      </div>
+      <div class="float-stat s2">
+        <div class="stat-icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <div>
+          <div class="stat-val">24/7</div>
+          <div class="stat-lbl">Emergency Open</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="card-badge">⭐ Gold Medalist</div>
+        <div class="doc-placeholder">
+          <i class="fa-solid fa-user-doctor"></i>
+          <div class="upload-hint"><img src="" alt=""></div>
+        </div>
+        <div class="doc-name">Dr. Muhammad Shafiq<br>Jalal Chaudhry</div>
+        <div class="doc-role">CEO & Consultant General Surgeon<br>MBBS · EMC · MCPS · CPSP</div>
+        <div class="doc-tags">
+          <span class="doc-tag">General Surgery</span>
+          <span class="doc-tag">MCPS</span>
+          <span class="doc-tag">CPSP</span>
+          <span class="doc-tag">EMC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ═════════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num"><span id="c1">0</span></div>
+        <div class="stat-desc">Successful Surgeries</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span id="c2">0</span></div>
+        <div class="stat-desc">Happy Patients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span id="c3">0</span></div>
+        <div class="stat-desc">Years of Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span id="c4">0</span></div>
+        <div class="stat-desc">Available Beds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <div class="about-img-frame">
+          <img src="p.png" alt="Dr. Muhammad Shafiq Jalal Chaudhry">
+          <a href="" class="ph-note">Dr. Shafiq Photo ↗</a>
+        </div>
+        <div class="about-corner-badge">
+          <div class="num">30+</div>
+          <div class="lbl">Years Experience</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-label">Our Surgeon</div>
+        <h2 class="section-title">Dr. Muhammad Shafiq<br>Jalal Chaudhry</h2>
+        <p class="about-desc">
+          Dr. Muhammad Shafiq Jalal Chaudhry is the Chief Executive Officer and lead General Surgeon at Sufi Amanat Ali Surgical Hospital, Pattoki. A proud Gold Medalist, he brings exceptional surgical expertise and a deep commitment to delivering affordable, high-quality healthcare to every patient. His mission is simple: safe care for every family.
+        </p>
+        <div class="creds-list">
+          <div class="cred-item">
+            <div class="cred-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="cred-text">
+              <strong>MBBS — Gold Medalist</strong>
+              <span>Medical Degree with Academic Excellence Award</span>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="cred-text">
+              <strong>MCPS · CPSP Certified</strong>
+              <span>College of Physicians & Surgeons Pakistan</span>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+            <div class="cred-text">
+              <strong>EMC Consultant General Surgeon</strong>
+              <span>Emergency & Elective Surgical Procedures</span>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon"><i class="fa-solid fa-book-medical"></i></div>
+            <div class="cred-text">
+              <strong>Society of Surgeons of Pakistan</strong>
+              <span>Active Contributor to Medical Research</span>
+            </div>
+          </div>
+        </div>
+        <a href="tel:03008169857" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:13px 28px;border-radius:10px;font-size:14px;font-weight:600">
+          <i class="fa-solid fa-phone"></i> Book Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ══════════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-label" style="justify-content:center">Our Specialties</div>
+      <h2 class="section-title">Comprehensive Medical Services</h2>
+      <p class="section-sub">From routine OPD consultations to advanced surgical procedures — we provide complete healthcare under one roof.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card svc-24">
+        <div class="svc-icon-wrap"><i class="fa-solid fa-truck-medical"></i></div>
+        <div class="svc-title">24/7 Emergency</div>
+        <p class="svc-desc">Round-the-clock emergency services with immediate response. Our team is always ready to handle any medical crisis, day or night.</p>
+        <span class="svc-badge">Always Open</span>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-wrap"><i class="fa-solid fa-user-md"></i></div>
+        <div class="svc-title">General Surgery</div>
+        <p class="svc-desc">Expert surgical care including appendectomy, hernia repair, gallbladder surgery, and a wide range of elective and emergency procedures.</p>
+        <span class="svc-badge">Specialist Care</span>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-wrap"><i class="fa-solid fa-bed-pulse"></i></div>
+        <div class="svc-title">ICU & Operation Theater</div>
+        <p class="svc-desc">Fully equipped Intensive Care Unit and a modern operation theater with advanced monitoring and anesthesia support for safe procedures.</p>
+        <span class="svc-badge">Advanced Facility</span>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-wrap"><i class="fa-solid fa-baby"></i></div>
+        <div class="svc-title">Maternity & OPD</div>
+        <p class="svc-desc">Dedicated maternity care with experienced staff for normal deliveries and C-sections, plus daily OPD for mother and child health.</p>
+        <span class="svc-badge">Mother & Child</span>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-wrap"><i class="fa-solid fa-flask"></i></div>
+        <div class="svc-title">Lab & Diagnostics</div>
+        <p class="svc-desc">In-house diagnostic laboratory offering blood tests, urinalysis, X-ray, ultrasound, and complete pathology services with fast results.</p>
+        <span class="svc-badge">Fast Results</span>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-wrap"><i class="fa-solid fa-id-card-clip"></i></div>
+        <div class="svc-title">Health Card Facility</div>
+        <p class="svc-desc">We proudly accept government Health Card schemes, making quality healthcare accessible and affordable for every family in Pattoki.</p>
+        <span class="svc-badge">Govt. Supported</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HEALTH CARD ════════════════════════════════════════════ -->
+<section id="healthcard">
+  <div class="container">
+    <div class="hc-wrap">
+      <div class="hc-left">
+        <div class="hc-icon">💳</div>
+        <h3 class="hc-title">Health Card<br>Accepted Here</h3>
+        <p class="hc-sub">We are proud to be part of the government Health Card program, ensuring every deserving family gets access to quality surgical and medical care — completely free of cost.</p>
+      </div>
+      <div class="hc-right">
+        <h3>What's Covered Under Health Card?</h3>
+        <div class="hc-benefits">
+          <div class="hc-benefit">
+            <div class="hc-benefit-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="hc-benefit-text">
+              <strong>Surgical Procedures</strong>
+              <span>General & emergency surgeries covered under the scheme at zero cost to patient</span>
+            </div>
+          </div>
+          <div class="hc-benefit">
+            <div class="hc-benefit-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="hc-benefit-text">
+              <strong>In-Patient Admission</strong>
+              <span>Hospital bed, nursing care, and ICU services included during treatment</span>
+            </div>
+          </div>
+          <div class="hc-benefit">
+            <div class="hc-benefit-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="hc-benefit-text">
+              <strong>Medicines & Lab Tests</strong>
+              <span>Essential medicines and diagnostic tests covered during your hospital stay</span>
+            </div>
+          </div>
+          <div class="hc-benefit">
+            <div class="hc-benefit-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="hc-benefit-text">
+              <strong>Maternity Services</strong>
+              <span>Mother and child healthcare including delivery and postnatal care</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TIMINGS ═══════════════════════════════════════════════ -->
+<section id="timings">
+  <div class="container">
+    <div class="timings-header">
+      <div class="section-label" style="justify-content:center">Visit Us</div>
+      <h2 class="section-title">Hospital Timings</h2>
+      <p class="section-sub" style="margin:0 auto">We are here when you need us. Check our schedule before you visit.</p>
+    </div>
+    <div class="timings-grid">
+      <div class="timing-card">
+        <div class="tc-icon"><i class="fa-solid fa-stethoscope"></i></div>
+        <h4>OPD Consultation</h4>
+        <div class="timing-rows">
+          <div class="timing-row highlight">
+            <span class="day">Monday – Friday</span>
+            <span class="time">9:00 AM – 2:00 PM</span>
+          </div>
+          <div class="timing-row">
+            <span class="day">Evening OPD</span>
+            <span class="time">5:00 PM – 10:00 PM</span>
+          </div>
+          <div class="timing-row">
+            <span class="day">Saturday</span>
+            <span class="time">9:00 AM – 2:00 PM</span>
+          </div>
+          <div class="timing-row">
+            <span class="day">Sunday</span>
+            <span class="time closed">By Appointment</span>
+          </div>
+        </div>
+      </div>
+      <div class="timing-card">
+        <div class="tc-icon"><i class="fa-solid fa-truck-medical"></i></div>
+        <h4>Emergency Department</h4>
+        <div class="always-open">
+          <div class="green-dot"></div>
+          Emergency is ALWAYS Open — 24 Hours a Day, 7 Days a Week
+        </div>
+        <div class="timing-rows" style="margin-top:16px">
+          <div class="timing-row highlight">
+            <span class="day">All Days</span>
+            <span class="time">24 / 7</span>
+          </div>
+          <div class="timing-row">
+            <span class="day">Weekends</span>
+            <span class="time">24 / 7</span>
+          </div>
+          <div class="timing-row">
+            <span class="day">Public Holidays</span>
+            <span class="time">24 / 7</span>
+          </div>
+        </div>
+      </div>
+      <div class="timing-card">
+        <div class="tc-icon"><i class="fa-solid fa-flask"></i></div>
+        <h4>Lab & Operation Theater</h4>
+        <div class="timing-rows">
+          <div class="timing-row highlight">
+            <span class="day">Lab (Daily)</span>
+            <span class="time">8:00 AM – 10:00 PM</span>
+          </div>
+          <div class="timing-row">
+            <span class="day">Urgent Lab</span>
+            <span class="time">Available 24/7</span>
+          </div>
+          <div class="timing-row">
+            <span class="day">Scheduled Surgery</span>
+            <span class="time">9:00 AM – 3:00 PM</span>
+          </div>
+          <div class="timing-row">
+            <span class="day">Emergency Surgery</span>
+            <span class="time">24 / 7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY US ════════════════════════════════════════════════ -->
+<section id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-image-side">
+        <div class="why-img-stack">
+          <div class="why-img-main"><i class="fa-solid fa-hospital"></i></div>
+          <div class="why-img-sub"><i class="fa-solid fa-heart-pulse"></i></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title" style="margin-bottom:32px">Pattoki's Most Trusted<br>Surgical Care</h2>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fa-solid fa-medal"></i></div>
+            <div>
+              <h5>Gold Medalist Surgeon</h5>
+              <p>Led by Dr. Muhammad Shafiq Jalal Chaudhry, a Gold Medalist MBBS and CPSP-certified consultant surgeon with 15+ years of experience.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fa-solid fa-wallet"></i></div>
+            <div>
+              <h5>Affordable Healthcare for All</h5>
+              <p>We believe quality care should be accessible to everyone. Government Health Card accepted. Transparent, fair pricing always.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fa-solid fa-microscope"></i></div>
+            <div>
+              <h5>Modern Equipment & Facilities</h5>
+              <p>Fully equipped operation theater, ICU, in-house diagnostics, and a dedicated lab — all under one roof in Pattoki.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fa-solid fa-hands-holding-heart"></i></div>
+            <div>
+              <h5>Compassionate Patient Care</h5>
+              <p>We treat every patient like family. Our trained nursing staff and support team ensure comfort and dignity at every step.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ════════════════════════════════════════════════ -->
+<section id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="section-label" style="justify-content:center">Patient Reviews</div>
+      <h2 class="section-title">What Our Patients Say</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Excellent surgical care. Dr. Shafiq is very skilled and the staff was very caring throughout my stay. Highly recommend this hospital."</p>
+        <div class="review-author">
+          <div class="author-avatar">A</div>
+          <div><div class="author-name">Ahmad Raza</div><div class="author-loc">Pattoki, Punjab</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Good experience, good work. The emergency team responded very quickly. Alhamdulillah my operation was successful. Doctor sahib is very professional."</p>
+        <div class="review-author">
+          <div class="author-avatar">F</div>
+          <div><div class="author-name">Farida Bibi</div><div class="author-loc">Pattoki, Punjab</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p class="review-text">"Health Card se mera operation hua. Zero paisa laga. Bohat shukriya Dr. Shafiq sahib ka. Pattoki mein aise hospital ki zaroorat thi."</p>
+        <div class="review-author">
+          <div class="author-avatar">M</div>
+          <div><div class="author-name">Muhammad Aslam</div><div class="author-loc">Gujranwala</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="section-label" style="justify-content:center">Get In Touch</div>
+      <h2 class="section-title">Contact & Appointments</h2>
+      <p class="section-sub" style="margin:0 auto">Reach out to us for appointments, queries, or emergency guidance.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <strong>Address</strong>
+            <span>Kohna Road, Gulshan E Subhan Colony,<br>Pattoki, Punjab, Pakistan</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <strong>Phone / WhatsApp</strong>
+            <a href="tel:03008169857">0300 8169857</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <strong>OPD Hours</strong>
+            <span>Morning: 9 AM – 2 PM<br>Evening: 5 PM – 10 PM</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon" style="background:rgba(220,38,38,0.1);"><i class="fa-solid fa-truck-medical" style="color:#dc2626"></i></div>
+          <div>
+            <strong>Emergency</strong>
+            <span style="color:#dc2626;font-weight:600">Open 24 Hours — 7 Days a Week</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-brands fa-facebook-f"></i></div>
+          <div>
+            <strong>Facebook</strong>
+            <a href="https://facebook.com" target="_blank">Sufi Amanat Ali Surgical Hospital</a>
+          </div>
+        </div>
+      </div>
+      <form id="appointmentForm" action="https://formsubmit.co/05db060d126690d3a5154041cb4458df" method="POST">
+      <div class="contact-form-wrap">
+        <h3>Book an Appointment</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input name="Name" type="text" placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input name="Phone" type="tel" placeholder="03XX-XXXXXXX" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Service Required</label>
+          <select>
+            <option value="">Select a service…</option>
+            <option>General Surgery</option>
+            <option>Emergency</option>
+            <option>ICU / Operation Theater</option>
+            <option>Maternity / OPD</option>
+            <option>Lab & Diagnostics</option>
+            <option>Health Card Inquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Time</label>
+          <select>
+            <option>Morning (9 AM – 2 PM)</option>
+            <option>Evening (5 PM – 10 PM)</option>
+            <option>Emergency (Anytime)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (Optional)</label>
+          <textarea placeholder="Describe your condition or query…"></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm()">
+          <i class="fa-solid fa-paper-plane" style="margin-right:8px"></i>
+          Send Appointment Request
+        </button>
+      </form>
+        <p style="font-size:12px;color:var(--text3);margin-top:12px;text-align:center">
+          <i class="fa-solid fa-circle-info" style="margin-right:4px"></i>
+          For urgent needs, call directly: <a href="tel:03008169857" style="color:var(--accent);font-weight:600">0300 8169857</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAP ════════════════════════════════════════════════════ -->
+<div class="map-strip">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.3!2d73.85!3d31.02!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDAxJzEyLjAiTiA3M8KwNTEnMDYuMCJF!5e0!3m2!1sen!2spk!4v1620000000000!5m2!1sen!2spk"
+    allowfullscreen="" loading="lazy">
+  </iframe>
+</div>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="flogo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="flogo-text">
+            <strong>Sufi Amanat Ali</strong>
+            <span>Surgical Hospital · Pattoki</span>
+          </div>
+        </div>
+        <p>Committed to safe, affordable, and high-quality healthcare for every patient in Pattoki and surrounding areas of Punjab.</p>
+        <div class="footer-socials">
+          <a href="#" class="f-social"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/923008169857" class="f-social"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="tel:03008169857" class="f-social"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Doctor</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#healthcard">Health Card</a></li>
+          <li><a href="#timings">Timings</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">General Surgery</a></li>
+          <li><a href="#services">Emergency 24/7</a></li>
+          <li><a href="#services">ICU & OT</a></li>
+          <li><a href="#services">Maternity & OPD</a></li>
+          <li><a href="#services">Lab & Diagnostics</a></li>
+          <li><a href="#services">Health Card</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-contact-list">
+          <div class="fc-item"><i class="fa-solid fa-location-dot"></i><span>Kohna Road, Gulshan E Subhan Colony, Pattoki, Punjab</span></div>
+          <div class="fc-item"><i class="fa-solid fa-phone"></i><span>0300 8169857</span></div>
+          <div class="fc-item"><i class="fa-solid fa-clock"></i><span>OPD: 9 AM–2 PM, 5–10 PM<br>Emergency: 24/7</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>© 2026 Sufi Amanat Ali Surgical Hospital, Pattoki. All Rights Reserved.</p>
+      <p>Managed by <a href="#">Dr. Muhammad Shafiq Jalal Chaudhry</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ EMERGENCY BUTTON ═══════════════════════════════════════ -->
+<a href="tel:03008169857" class="emergency-banner">
+  <i class="fa-solid fa-truck-medical"></i>
+  <div>
+    <span>Emergency?</span>
+    <small>Call 0300 8169857</small>
+  </div>
+</a>
+
+<!-- ═══ SCRIPTS ═══════════════════════════════════════════════ -->
+<script>
+/* Theme Toggle */
+function toggleTheme(){
+  const html=document.documentElement;
+  const isDark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',isDark?'light':'dark');
+  document.getElementById('themeIcon').className=isDark?'fa-solid fa-sun icon':'fa-solid fa-moon icon';
+  localStorage.setItem('theme',isDark?'light':'dark');
+}
+// Load saved theme
+(function(){
+  const saved=localStorage.getItem('theme')||'light';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.getElementById('themeIcon').className=saved==='dark'?'fa-solid fa-moon icon':'fa-solid fa-sun icon';
+})();
+
+/* Mobile Menu */
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobile(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+/* Counters */
+function animateCounter(el,target,suffix,duration){
+  let start=0,step=target/(duration/16);
+  const timer=setInterval(()=>{
+    start+=step;if(start>=target){start=target;clearInterval(timer)}
+    el.textContent=Math.floor(start)+(suffix||'');
+  },16);
+}
+let counted=false;
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting&&!counted){
+      counted=true;
+      animateCounter(document.getElementById('c1'),5000,'+',1500);
+      animateCounter(document.getElementById('c2'),30000,'+',1800);
+      animateCounter(document.getElementById('c3'),30,'+',1200);
+      animateCounter(document.getElementById('c4'),30,'',1000);
+    }
+  });
+},{threshold:0.3});
+const statsSection=document.getElementById('stats');
+if(statsSection)observer.observe(statsSection);
+
+/* Scroll animations */
+const scrollEls=document.querySelectorAll('.service-card,.timing-card,.why-point,.review-card,.contact-item,.hc-benefit');
+const scrollObs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>{e.target.style.opacity='1';e.target.style.transform='translateY(0)'},i*80);
+      scrollObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.1});
+scrollEls.forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(24px)';
+  el.style.transition='opacity .5s ease,transform .5s ease';
+  scrollObs.observe(el);
+});
+
+/* Form submit */
+function submitForm(){
+  const btn=document.querySelector('.btn-submit');
+  btn.innerHTML='<i class="fa-solid fa-check" style="margin-right:8px"></i>Request Sent! We will call you soon.';
+  btn.style.background='#2e7d32';
+  setTimeout(()=>{
+    btn.innerHTML='<i class="fa-solid fa-paper-plane" style="margin-right:8px"></i>Send Appointment Request';
+    btn.style.background='';
+  },4000);
+}
+
+/* Navbar scroll effect */
+window.addEventListener('scroll',()=>{
+  const nav=document.getElementById('navbar');
+  if(window.scrollY>50){nav.style.boxShadow='0 2px 32px rgba(0,0,0,0.12)'}
+  else{nav.style.boxShadow='none'}
+});
+
+document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Page ko reload hone se rokne ke liye
+
+    // 1. Ek temporary success message element create karein
+    let successDiv = document.getElementById('form-success-msg');
+    if (!successDiv) {
+        successDiv = document.createElement('div');
+        successDiv.id = 'form-success-msg';
+        // Message ki styling (Green color aur clean font)
+        successDiv.style.color = '#155724';
+        successDiv.style.backgroundColor = '#d4edda';
+        successDiv.style.borderColor = '#c3e6cb';
+        successDiv.style.padding = '12px';
+        successDiv.style.marginTop = '15px';
+        successDiv.style.borderRadius = '5px';
+        successDiv.style.fontWeight = 'bold';
+        successDiv.style.textAlign = 'center';
+        
+        // Isko form ke bilkul neeche add karein
+        this.appendChild(successDiv);
+    }
+
+    // 2. Message text set karein
+    successDiv.textContent = "Thank you! We will confirm your appointment via Call/WhatsApp shortly.";
+    successDiv.style.display = 'block';
+
+    // 3. Form ke fields ko khali (reset) karein
+    this.reset();
+
+    // 4. 5 second baad message ko gayab karne ke liye (Optional)
+    setTimeout(function() {
+        successDiv.style.display = 'none';
+    }, 5000);
+});
+
+</script>
+</body>
+</html>
