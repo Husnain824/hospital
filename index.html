@@ -1171,7 +1171,7 @@
   const statObserver = new IntersectionObserver((entries)=>{
     entries.forEach(en=>{
       if(en.isIntersecting){
-        animateCount(document.getElementById('statSurg'), 50,000, '+');
+        animateCount(document.getElementById('statSurg'), 50000, '+');
         animateCount(document.getElementById('statPatients'), 50, 'K+');
         animateCount(document.getElementById('statSpec'), specialists.length, '+');
         statObserver.disconnect();
